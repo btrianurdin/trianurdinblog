@@ -13,6 +13,7 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400&display=swap" rel="stylesheet" />
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <body>
           <Main />
