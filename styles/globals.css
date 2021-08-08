@@ -1,16 +1,47 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.dark {
+  --color-bg-primary: #2d3748;
+  --color-bg-secondary: #283141;
+  --color-text-primary: #f7fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-accent: #81e6d9;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.light {
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #edf2f7;
+  --color-text-primary: #2d3748;
+  --color-text-secondary: #4a5568;
+  --color-text-accent: #2b6cb0;
 }
 
-* {
-  box-sizing: border-box;
+::root {
+  @apply light;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+  body{
+    font-family: 'Montserrat', sans-serif;
+    @apply bg-primary;
+  }
+  .link-to{
+    @apply relative overflow-hidden no-underline text-pink-600;
+  }
+  .link-to::after{
+    content: "";
+    @apply absolute bg-pink-600 opacity-25 bottom-0 left-3;
+    width: calc(100% - 8px);
+    height: calc(100% - 8px);
+    z-index: -1;
+    transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+  }
+  .link-to:hover::after{
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 100%;
+  }
 }
