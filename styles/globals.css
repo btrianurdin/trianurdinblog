@@ -44,4 +44,29 @@
     width: 100%;
     height: 100%;
   }
+  .blog-content h1{
+    @apply text-xl md:text-2xl font-semibold;
+  }
+  .blog-content h2{
+    font-size: 22px;
+    line-height: 2rem;
+    @apply font-semibold;
+  }
+  .blog-content h3{
+    font-size: 20px;
+    line-height: 1.75rem;
+    @apply font-semibold;
+  }
+  .blog-content p{
+    @apply my-4;
+  }
+  .blog-content a{
+    @apply link-to text-sm mx-0.5;
+  }
+  .blog-content pre{
+    @apply bg-gray-200 rounded p-2;
+  }
+  .blog-content pre code{
+    @apply font-firacode font-normal text-sm;
+  }
 }

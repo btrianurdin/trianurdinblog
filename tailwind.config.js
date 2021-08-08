@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         raleway: ['Montserrat', 'sans-serif'],
+        firacode: ['Fira Code', 'consolas', 'sans-serif'],
       },
       backgroundColor: {
         primary: 'var(--color-bg-primary)',

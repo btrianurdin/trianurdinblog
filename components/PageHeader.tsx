@@ -1,5 +1,6 @@
 import { FiArrowLeft } from 'react-icons/fi';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import DarkModeToggle from './DarkModeToggle';
 
 export default function PageHeader(): JSX.Element {
@@ -12,7 +13,11 @@ export default function PageHeader(): JSX.Element {
         <h6 className="ml-1 hidden sm:block">Kembali</h6>
       </button>
       <div className="flex-grow text-center">
-        <h1 className="text-xl font-semibold link-to inline-block">Blog Guys</h1>
+        <Link href="/blogs" passHref>
+          <a href="replace" className="link-to">
+            <h1 className="text-xl font-semibold inline-block">Blog Guys</h1>
+          </a>
+        </Link>
       </div>
       <div className="w-24 flex justify-end">
         <DarkModeToggle />

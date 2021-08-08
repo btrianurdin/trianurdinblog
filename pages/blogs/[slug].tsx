@@ -44,7 +44,7 @@ export default function Blog({ post }: Props): JSX.Element {
               <Image loader={myLoader} src={coverImage} alt="Cover image" layout="fill" objectFit="cover" />
             </div>
             )}
-          <div className="text-base mb-3 mt-5">
+          <div className="text-base my-3 blog-content">
             <ReactMarkdown skipHtml children={post[0].content || ''} />
           </div>
           <div className="border-t py-3 mt-7 text-sm">
