@@ -59,18 +59,6 @@ export default function Blog({ post }: Props): JSX.Element {
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
-  const res = await axios.get(`/blogs?slug=${params.slug}`);
-  const blogs: Posts[] = res.data;
-
-  return {
-    props: {
-      post: blogs,
-    },
-    revalidate: 1,
-  };
-};
-
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await axios.get('/blogs');
   const blogs: Posts[] = res.data;
@@ -84,5 +72,17 @@ export const getStaticPaths: GetStaticPaths = async () => {
       }
     )),
     fallback: false,
+  };
+};
+
+export const getStaticProps: GetStaticProps = async ({ params }: Params) => {
+  const res = await axios.get(`/blogs?slug=${params.slug}`);
+  const blogs: Posts[] = res.data;
+
+  return {
+    props: {
+      post: blogs,
+    },
+    revalidate: 1,
   };
 };
