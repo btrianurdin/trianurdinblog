@@ -23,13 +23,13 @@ export default function Blog({ post }: Props): JSX.Element {
     <>
       <Head>
         <title>{post[0].title}</title>
-        <meta name="description" content={post[0].excerpt.substr(0, 20)} property="og:description" />
+        <meta name="description" content={post[0].excerpt} property="og:description" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@btrianurdin" />
         <meta name="twitter:creator" content="@btrianurdin" />
         <meta property="og:url" content={`${baseURL}/blogs/${post[0].slug}`} />
         <meta property="og:title" content={post[0].title} />
-        <meta property="og:description" content={post[0].excerpt.substr(0, 20)} />
+        <meta property="og:description" content={post[0].excerpt} />
         <meta property="og:image" content={coverImage} />
       </Head>
       <div className="container mx-auto sm:w-3/4 md:w-3/5 lg:w-2/4 text-primary">
