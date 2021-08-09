@@ -2,8 +2,8 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import PageHeader from '../../components/PageHeader';
 import PostItems from '../../components/PostItems';
+import Seo from '../../components/Seo';
 import axios from '../../lib/axios';
-import { baseURL } from '../../lib/config';
 import Posts from '../../types/posts';
 
 type Props = {
@@ -15,13 +15,14 @@ export default function Blogs({ blogs }: Props): JSX.Element {
     <>
       <Head>
         <title>I don&apos;t know what I will write</title>
-        <meta name="description" content="Hello, I am Bagus Trianurdin. In my life, I want to be an Astronaut (but now I am a Programmer, hehe)." property="og:description" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@btrianurdin" />
-        <meta name="twitter:creator" content="@btrianurdin" />
-        <meta property="og:url" content={`${baseURL}`} />
-        <meta property="og:description" content="Hello, I am Bagus Trianurdin. In my life, I want to be an Astronaut (but now I am a Programmer, hehe)." />
       </Head>
+      <Seo
+        meta={{
+          title: 'Bagus Trianurdin\'s',
+          description: 'Hello, I am Bagus Trianurdin. In my life, I want to be an Astronaut (but now I am a Programmer, hehe)',
+          pathname: '/',
+        }}
+      />
       <div className="container mx-auto sm:w-3/4 md:w-3/5 lg:w-2/4 text-primary">
         <PageHeader />
         <div className="p-2">

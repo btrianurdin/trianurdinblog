@@ -8,7 +8,7 @@ import PageHeader from '../../components/PageHeader';
 import axios from '../../lib/axios';
 import Posts from '../../types/posts';
 import dateFormat from '../../utils/dateFormat';
-import { baseURL } from '../../lib/config';
+import Seo from '../../components/Seo';
 
 type Props = {
   post: Posts[]
@@ -23,15 +23,23 @@ export default function Blog({ post }: Props): JSX.Element {
     <>
       <Head>
         <title>{post[0].title}</title>
-        <meta name="description" content={post[0].excerpt} property="og:description" />
+        {/* <meta name="description" content={post[0].excerpt} property="og:description" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@btrianurdin" />
         <meta name="twitter:creator" content="@btrianurdin" />
         <meta property="og:url" content={`${baseURL}/blogs/${post[0].slug}`} />
         <meta property="og:title" content={post[0].title} />
         <meta property="og:description" content={post[0].excerpt} />
-        <meta property="og:image" content={coverImage} />
+        <meta property="og:image" content={coverImage} /> */}
       </Head>
+      <Seo
+        meta={{
+          title: post[0].title,
+          description: post[0].excerpt,
+          pathname: `/blogs/${post[0].slug}`,
+          imageUrl: coverImage,
+        }}
+      />
       <div className="container mx-auto sm:w-3/4 md:w-3/5 lg:w-2/4 text-primary">
         <PageHeader />
         <div className="p-2 mt-6 mb-14">
