@@ -24,7 +24,7 @@ export default function Blogs({ blogs }: Props): JSX.Element {
         }}
       />
       <div className="container mx-auto sm:w-3/4 md:w-3/5 lg:w-2/4 text-primary">
-        <PageHeader />
+        <PageHeader title="Bloggg." />
         <div className="p-2">
           {
             blogs.map((blog) => (

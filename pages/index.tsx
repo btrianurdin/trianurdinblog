@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
             My full name is Bagus Trianurdin.
           </p>
           <p className="mt-2 font-light">
-            I work with Javascript, PHP, NodeJS, Etc.
+            I work with Javascript, PHP, NodeJS, etc.
           </p>
           <p className="mt-2 font-light">
             I love everything I do

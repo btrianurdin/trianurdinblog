@@ -3,7 +3,11 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import DarkModeToggle from './DarkModeToggle';
 
-export default function PageHeader(): JSX.Element {
+type Props = {
+  title: string;
+}
+
+export default function PageHeader({ title }: Props): JSX.Element {
   const router = useRouter();
 
   return (
@@ -15,7 +19,7 @@ export default function PageHeader(): JSX.Element {
       <div className="flex-grow text-center">
         <Link href="/blogs" passHref>
           <a href="replace" className="link-to">
-            <h1 className="text-xl font-semibold inline-block">Blog Guys</h1>
+            <h1 className="text-xl font-semibold inline-block">{ title }</h1>
           </a>
         </Link>
       </div>
