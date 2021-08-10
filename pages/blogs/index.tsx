@@ -13,12 +13,9 @@ type Props = {
 export default function Blogs({ blogs }: Props): JSX.Element {
   return (
     <>
-      <Head>
-        <title>I don&apos;t know what I will write</title>
-      </Head>
       <Seo
         meta={{
-          title: 'Bagus Trianurdin\'s',
+          title: 'I don\'t know what will I writ',
           description: 'Hello, I am Bagus Trianurdin. In my life, I want to be an Astronaut (but now I am a Programmer, hehe)',
           pathname: '/',
         }}

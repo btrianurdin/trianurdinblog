@@ -7,9 +7,6 @@ import Seo from '../components/Seo';
 export default function Home(): JSX.Element {
   return (
     <>
-      <Head>
-        <title>Silahkan berbelanja!</title>
-      </Head>
       <Seo
         meta={{
           title: 'Bagus Trianurdin\'s',
@@ -36,7 +33,7 @@ export default function Home(): JSX.Element {
             <FiHeart className="inline-block text-pink-600" />
           </p>
           <div className="mt-3">
-            <Link href="/blogs" passHref><a href="replace" className="link-to">About</a></Link>
+            <Link href="/about" passHref><a href="replace" className="link-to">About</a></Link>
             <Link href="/blogs" passHref><a href="replace" className="link-to ml-4">Blog</a></Link>
             <Link href="/blogs" passHref><a href="replace" className="link-to ml-4">CV</a></Link>
           </div>
