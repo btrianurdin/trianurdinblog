@@ -69,4 +69,11 @@
   .blog-content pre code{
     @apply font-firacode font-normal text-sm;
   }
+  .my-photo::after{
+    content: "";
+    @apply bg-pink-600 bottom-1 left-3;
+    width: 170px;
+    height: 213px;
+    z-index: -1;
+  }
 }

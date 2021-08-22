@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import Link from 'next/link';
 import { FiHeart } from 'react-icons/fi';
 import DarkModeToggle from '../components/DarkModeToggle';

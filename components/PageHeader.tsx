@@ -5,9 +5,10 @@ import DarkModeToggle from './DarkModeToggle';
 
 type Props = {
   title: string;
+  link: string;
 }
 
-export default function PageHeader({ title }: Props): JSX.Element {
+export default function PageHeader({ title, link }: Props): JSX.Element {
   const router = useRouter();
 
   return (
@@ -17,7 +18,7 @@ export default function PageHeader({ title }: Props): JSX.Element {
         <h6 className="ml-1 hidden sm:block">Kembali</h6>
       </button>
       <div className="flex-grow text-center">
-        <Link href="/blogs" passHref>
+        <Link href={`/${link}`} passHref>
           <a href="replace" className="link-to">
             <h1 className="text-xl font-semibold inline-block">{ title }</h1>
           </a>

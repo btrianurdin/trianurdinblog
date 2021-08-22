@@ -17,7 +17,7 @@ type Props = {
 export default function Blog({ post }: Props): JSX.Element {
   const coverImage = post[0].cover?.formats.medium.url || '';
 
-  const myLoader = () => `${post[0].cover.formats.medium.url}`;
+  const myLoader = () => `${post[0].cover.formats.large.url}`;
 
   return (
     <>
@@ -41,7 +41,7 @@ export default function Blog({ post }: Props): JSX.Element {
         }}
       />
       <div className="container mx-auto sm:w-3/4 md:w-3/5 lg:w-2/4 text-primary">
-        <PageHeader title="Bloggg." />
+        <PageHeader title="Bloggg." link="blogs" />
         <div className="p-2 mt-6 mb-14">
           <div className="my-3">
             <h1 className="text-xl md:text-2xl font-medium">{post[0].title}</h1>
@@ -53,7 +53,7 @@ export default function Blog({ post }: Props): JSX.Element {
             </div>
             )}
           <div className="text-base my-3 blog-content">
-            <ReactMarkdown skipHtml children={post[0].content || ''} />
+            <ReactMarkdown skipHtml={false} children={post[0].content || ''} />
           </div>
           <div className="border-t py-3 mt-7 text-sm">
             <p>
