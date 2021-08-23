@@ -1,9 +1,10 @@
 import Image from 'next/image';
+import CompetenciesIcons from '../../components/CompetenciesIcons';
 import PageHeader from '../../components/PageHeader';
 import Seo from '../../components/Seo';
 
 export default function About(): JSX.Element {
-  const imgLoader = () => 'https://res.cloudinary.com/trianurdin/image/upload/v1628583472/strapiblog.jpg';
+  const imgLoader = () => 'https://res.cloudinary.com/trianurdin/image/upload/v1629689035/strapiblog.jpg';
   return (
     <>
       <Seo
@@ -31,15 +32,28 @@ export default function About(): JSX.Element {
             </div>
             <div className="w-full my-5 md:my-0">
               <p>
-                A Web Tech lover. Hi, I am Bagus Trianurdin. My friends and my family call me Bagus.
-                I am a Web Developer
+                Hi, I am Bagus Trianurdin. My friends and my family call me Bagus.
+                I am a Web Developer and Web Tech lover.
               </p>
               <p className="mt-3">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque vel facere
-                quod doloremque. Mollitia libero architecto ipsam voluptatem voluptate cum
-                quisquam reprehenderit error,
-                rerum sequi culpa saepe? Nisi, ad assumenda.
+                I love to learn and enthusiastic about new things related to technology, startup,
+                business, and social things. I am able to work in a team and able to work under
+                pressure.  Skilled in front-end and back-end development, communication, and
+                database.
               </p>
+              <p className="mt-3">
+                I enjoy building web apps using Typescript, NodeJs, PHP, React, and other. I love
+                coding, coffee, and I love myself 😁
+              </p>
+            </div>
+            <div className="w-full my-12">
+              <div className="relative h-9">
+                <h2 className="text-2xl font-semibold text-pink-600 ml-2">Competencies</h2>
+                <div className="absolute w-9 h-full bg-pink-600 opacity-25 top-0" />
+              </div>
+              <div className="flex flex-wrap justify-between">
+                <CompetenciesIcons />
+              </div>
             </div>
           </div>
         </div>
