@@ -9,7 +9,7 @@ export default function Home(): JSX.Element {
       <Seo
         meta={{
           title: 'Bagus Trianurdin\'s',
-          description: 'Hello, I am Bagus Trianurdin. In my life, I want to be an Astronaut (but now I am a Programmer, hehe)',
+          description: 'Hello, I am Bagus Trianurdin. In my life, I want to be an Astronaut (but now I am a Programmer, hehe). I am a Web Developer and Web Tech lover.',
           pathname: '/',
         }}
       />

@@ -15,7 +15,7 @@ export default function Blogs({ blogs }: Props): JSX.Element {
       <Seo
         meta={{
           title: 'I don\'t know what will I writ',
-          description: 'Hello, I am Bagus Trianurdin. In my life, I want to be an Astronaut (but now I am a Programmer, hehe)',
+          description: 'Hello, I am Bagus Trianurdin. In my life, I want to be an Astronaut (but now I am a Programmer, hehe). I am a Web Developer and Web Tech lover.',
           pathname: '/',
         }}
       />
