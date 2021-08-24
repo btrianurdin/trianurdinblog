@@ -1,9 +1,7 @@
 import Image from 'next/image';
 import CompetenciesIcons from '../../components/CompetenciesIcons';
 import PageHeader from '../../components/PageHeader';
-import PagePart from '../../components/PagePart';
 import Seo from '../../components/Seo';
-import socialMedia from '../../data/social-media';
 
 export default function About(): JSX.Element {
   const imgLoader = () => 'https://res.cloudinary.com/trianurdin/image/upload/v1629689035/strapiblog.jpg';
@@ -48,27 +46,15 @@ export default function About(): JSX.Element {
                 coding, coffee, and I love myself 😁
               </p>
             </div>
-            <PagePart title="Competencies">
-              <CompetenciesIcons />
-            </PagePart>
-            <PagePart title="Contact">
-              <ul className="my-6 flex w-full flex-wrap justify-center">
-                {
-                  Object.keys(socialMedia).map((key: string) => (
-                    <li key={key} className="mx-5 mb-6">
-                      <a href={(socialMedia as any)[key].link} className="link-to flex items-center">
-                        {
-                          (socialMedia as any)[key].icon
-                        }
-                        {
-                          (socialMedia as any)[key].text
-                        }
-                      </a>
-                    </li>
-                  ))
-                }
-              </ul>
-            </PagePart>
+            <div className="w-full my-12">
+              <div className="relative h-9">
+                <h2 className="text-2xl font-semibold text-pink-600 ml-2">Competencies</h2>
+                <div className="absolute w-9 h-full bg-pink-600 opacity-25 top-0" />
+              </div>
+              <div className="flex flex-wrap justify-between">
+                <CompetenciesIcons />
+              </div>
+            </div>
           </div>
         </div>
       </div>
