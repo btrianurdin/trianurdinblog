@@ -6,7 +6,7 @@ import Seo from '../../components/Seo';
 import socialMedia from '../../data/social-media';
 
 export default function About(): JSX.Element {
-  const imgLoader = () => 'https://res.cloudinary.com/trianurdin/image/upload/v1629689035/strapiblog.jpg';
+  const imgLoader = () => 'https://res.cloudinary.com/trianurdin/image/upload/v1629799601/blogassets/IMG_20210425_WA_0035_1_be31f75249.jpg';
   return (
     <>
       <Seo
