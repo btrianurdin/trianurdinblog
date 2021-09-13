@@ -1,46 +1,39 @@
 import {
   SiInstagram, SiLinkedin, SiTelegram, SiTwitter,
 } from 'react-icons/si';
-import { MdEmail } from 'react-icons/md';
 
-type SocialMediaProperty = {
-  [key: string]: string | JSX.Element;
+interface ISocialMedia {
+  name: string;
+  link: string;
+  text: string;
+  icon: JSX.Element;
 }
 
-export type SocialMedia = {
-  instagram: SocialMediaProperty;
-  twitter: SocialMediaProperty;
-  linkedin: SocialMediaProperty;
-  email: SocialMediaProperty;
-  telegram: SocialMediaProperty;
-}
-
-const socialMedia: SocialMedia = {
-  instagram: {
+const socialMedia: Array<ISocialMedia> = [
+  {
+    name: 'instagram',
     link: 'https://instagram.com/btrianurdin',
     text: '@btrianurdin',
-    icon: <SiInstagram className="mr-0.5" />,
+    icon: <SiInstagram className="mr-0.5 inline" />,
   },
-  twitter: {
+  {
+    name: 'twitter',
     link: 'https://instagram.com/btrianurdin',
     text: '@btrianurdin',
-    icon: <SiTwitter className="mr-0.5" />,
+    icon: <SiTwitter className="mr-0.5 inline" />,
   },
-  linkedin: {
+  {
+    name: 'linkedin',
     link: 'https://www.linkedin.com/in/btrianurdin',
     text: 'btrianurdin',
-    icon: <SiLinkedin className="mr-0.5" />,
+    icon: <SiLinkedin className="mr-0.5 inline" />,
   },
-  email: {
-    link: 'mailto:bagustrianurdin@outlook.com',
-    text: 'Email',
-    icon: <MdEmail className="mr-0.5 text-lg" />,
-  },
-  telegram: {
-    link: 't.me/bgstrianurdin',
+  {
+    name: 'telegram',
+    link: 'https://t.me/bgstrianurdin',
     text: '@bgstrianurdin',
-    icon: <SiTelegram className="mr-0.5" />,
+    icon: <SiTelegram className="mr-0.5 inline" />,
   },
-};
+];
 
 export default socialMedia;

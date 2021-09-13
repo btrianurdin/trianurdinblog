@@ -23,7 +23,9 @@
     "@typescript-eslint"
   ],
   "rules": {
+    "react/jsx-no-comment-textnodes": "off",
     "@typescript-eslint/no-explicit-any": "off",
+    "jsx-a11y/anchor-is-valid": "off",
     "camelcase": "off",
     "import/extensions": "off",
     "import/no-unresolved": "off",
@@ -45,7 +47,6 @@
   },
   "overrides": [
     {
-      // enable the rule specifically for TypeScript files
       "files": [
         "*.ts",
         "*.tsx"

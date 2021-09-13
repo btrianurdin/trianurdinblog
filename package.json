@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "framer-motion": "^4.1.17",
+    "jotai": "^1.3.3",
     "next": "11.0.1",
     "next-seo": "^4.26.0",
     "next-themes": "^0.0.15",

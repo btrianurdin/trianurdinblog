@@ -1,17 +1,15 @@
 .dark {
-  --color-bg-primary: #2d3748;
+  --color-bg-primary: #16213E;
   --color-bg-secondary: #283141;
-  --color-text-primary: #f7fafc;
+  --color-text-primary: #ffffff;
   --color-text-secondary: #e2e8f0;
-  --color-text-accent: #81e6d9;
 }
 
 .light {
   --color-bg-primary: #ffffff;
   --color-bg-secondary: #edf2f7;
-  --color-text-primary: #2d3748;
+  --color-text-primary: #070707;
   --color-text-secondary: #4a5568;
-  --color-text-accent: #2b6cb0;
 }
 
 ::root {
@@ -22,10 +20,44 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base{
   body{
-    font-family: 'Montserrat', sans-serif;
-    @apply bg-primary;
+    font-family: 'Poppins', sans-serif;
+    @apply bg-primary transition-colors duration-150;
+  }
+  .hero-bg {
+    @apply bg-hero-bg;
+    z-index: -2;
+  }
+  .aboutme-bg {
+    @apply bg-aboutme-bg;
+    z-index: -2;
+  }
+  .anchor::after{
+    content: "";
+    @apply absolute bg-pinky opacity-30 bottom-0 left-2;
+    width: calc(100% - 3px);
+    height: calc(100% - 7px);
+    z-index: -1;
+    transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+  }
+  .anchor:hover::after{
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .section-title{
+    @apply relative pl-2 text-xl md:text-2xl font-medium border-pinky inline-block;
+  }
+  .section-title::after{
+    content: "";
+    @apply absolute bg-pinky opacity-30 w-0 h-full left-0;
+    transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
+    z-index: -2;
+  }
+  .section-title:hover::after{
+    width: 100%;
   }
   .link-to{
     @apply relative overflow-hidden no-underline text-pink-600;
