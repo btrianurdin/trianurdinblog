@@ -14,25 +14,25 @@ const socialMedia: Array<ISocialMedia> = [
     name: 'instagram',
     link: 'https://instagram.com/btrianurdin',
     text: '@btrianurdin',
-    icon: <SiInstagram className="mr-0.5 inline" />,
+    icon: <SiInstagram style={{ marginRight: '2px', display: 'inline' }} />,
   },
   {
     name: 'twitter',
     link: 'https://instagram.com/btrianurdin',
     text: '@btrianurdin',
-    icon: <SiTwitter className="mr-0.5 inline" />,
+    icon: <SiTwitter style={{ marginRight: '2px', display: 'inline' }} />,
   },
   {
     name: 'linkedin',
     link: 'https://www.linkedin.com/in/btrianurdin',
     text: 'btrianurdin',
-    icon: <SiLinkedin className="mr-0.5 inline" />,
+    icon: <SiLinkedin style={{ marginRight: '2px', display: 'inline' }} />,
   },
   {
     name: 'telegram',
     link: 'https://t.me/bgstrianurdin',
     text: '@bgstrianurdin',
-    icon: <SiTelegram className="mr-0.5 inline" />,
+    icon: <SiTelegram style={{ marginRight: '2px', display: 'inline' }} />,
   },
 ];
 
