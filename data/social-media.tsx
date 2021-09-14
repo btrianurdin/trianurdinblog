@@ -18,7 +18,7 @@ const socialMedia: Array<ISocialMedia> = [
   },
   {
     name: 'twitter',
-    link: 'https://instagram.com/btrianurdin',
+    link: 'https://twitter.com/btrianurdin',
     text: '@btrianurdin',
     icon: <SiTwitter style={{ marginRight: '2px', display: 'inline' }} />,
   },
