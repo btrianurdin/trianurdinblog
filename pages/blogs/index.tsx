@@ -1,51 +1,18 @@
-import { GetStaticProps } from 'next';
-import PageHeader from '../../components/PageHeader';
-import PostItems from '../../components/PostItems';
-import Seo from '../../components/Seo';
-import axios from '../../lib/axios';
-import Posts from '../../types/posts';
+import Link from 'next/link';
 
-type Props = {
-  blogs: Posts[]
-}
-
-export default function Blogs({ blogs }: Props): JSX.Element {
+export default function Blogs(): JSX.Element {
   return (
     <>
-      <Seo
-        meta={{
-          title: 'I don\'t know what will I writ',
-          description: 'Hello, I am Bagus Trianurdin. In my life, I want to be an Astronaut (but now I am a Programmer, hehe). I am a Web Developer and Web Tech lover.',
-          pathname: '/',
-        }}
-      />
-      <div className="container mx-auto sm:w-3/4 md:w-3/5 lg:w-2/4 text-primary">
-        <PageHeader title="Bloggg." link="blogs" />
-        <div className="p-2">
-          {
-            blogs.map((blog) => (
-              <PostItems
-                key={blog.id}
-                slug={blog.slug}
-                title={blog.title}
-                excerpt={blog.excerpt}
-              />
-            ))
-          }
+      <div className="h-screen flex items-center justify-center">
+        <div className="w-80">
+          <h2 className="text-primary font-light text-2xl md:text-3xl">Under Construction.</h2>
+          <h4 className="text-primary text-lg font-light mt-3">
+            <Link href="/">
+              <a className="relative anchor inline-block">@btrianurdin</a>
+            </Link>
+          </h4>
         </div>
       </div>
     </>
   );
 }
-
-export const getStaticProps: GetStaticProps = async () => {
-  const res = await axios.get('/blogs');
-  const blogs = await res.data;
-
-  return {
-    props: {
-      blogs,
-    },
-    revalidate: 1,
-  };
-};
