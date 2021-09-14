@@ -9,7 +9,7 @@ interface Props {
 export default function Anchor({ href, text, icon }: Props): JSX.Element {
   return (
     <Link href={href}>
-      <a className="relative anchor mx-4 my-2 inline-block">
+      <a className="anchor mx-4 my-2">
         {icon}
         {text}
       </a>

@@ -5,7 +5,6 @@ import RightHero from './RightHero';
 export default function Hero(): JSX.Element {
   return (
     <>
-      <div className="hero-bg absolute left-0 w-full h-full bg-no-repeat" />
       <div className="absolute hidden md:block md:-right-10 top-32" style={{ zIndex: -2 }}>
         <SiReact className="text-black opacity-10 w-32 h-32" />
       </div>

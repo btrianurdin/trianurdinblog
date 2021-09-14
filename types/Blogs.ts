@@ -1,4 +1,4 @@
-type Posts = {
+export interface IPost {
   id?: number;
   slug: string;
   title: string;
@@ -7,5 +7,3 @@ type Posts = {
   cover?: any;
   published_at?: string;
 }
-
-export default Posts;

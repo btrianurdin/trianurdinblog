@@ -1,18 +1,41 @@
-import Link from 'next/link';
+import { GetStaticProps } from 'next';
+import Layout from '../../components/molecules/Layout';
+import BlogPosts from '../../components/organisms/BlogPosts';
+import { getBlogPosts } from '../../services/blogs';
+import { IPost } from '../../types/Blogs';
+import PageHeader from '../../components/molecules/PageHeader';
 
-export default function Blogs(): JSX.Element {
+interface Props {
+  posts: IPost[];
+}
+
+export default function Blogs({ posts }: Props): JSX.Element {
   return (
-    <>
-      <div className="h-screen flex items-center justify-center">
-        <div className="w-80">
-          <h2 className="text-primary font-light text-2xl md:text-3xl">Under Construction.</h2>
-          <h4 className="text-primary text-lg font-light mt-3">
-            <Link href="/">
-              <a className="relative anchor inline-block">@btrianurdin</a>
-            </Link>
-          </h4>
+    <Layout
+      fixedBackground
+      seoMeta={{
+        title: 'My Personal Blogs',
+        description: 'Hello, I am Bagus Trianurdin. In my life, I want to be an Astronaut (but now I am a Programmer, hehe). I am a Web Developer and Web Tech lover.',
+        pathname: '/blogs',
+      }}
+    >
+      <div className="container mx-auto sm:w-3/4 lg:w-3/6 px-3.5 text-primary">
+        <PageHeader mainTitle="blogs" />
+        <div className="mb-16">
+          <BlogPosts posts={posts} />
         </div>
       </div>
-    </>
+    </Layout>
   );
 }
+
+export const getStaticProps: GetStaticProps = async () => {
+  const posts: IPost[] = await getBlogPosts();
+
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 1,
+  };
+};

@@ -1,16 +1,16 @@
 import { NextSeo } from 'next-seo';
 import { baseURL } from '../lib/config';
 
-type MetaSeo = {
+export interface MetaSeo {
   title: string;
   description: string;
   pathname: string;
   imageUrl?: string;
-};
+}
 
-type Props = {
+interface Props {
   meta: MetaSeo;
-};
+}
 
 export default function Seo({ meta }: Props): JSX.Element {
   return (

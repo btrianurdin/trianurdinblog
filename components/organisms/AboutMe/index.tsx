@@ -3,7 +3,7 @@ import Section from '../../molecules/Section';
 
 export default function AboutMe(): JSX.Element {
   return (
-    <Section title="Short About Me" className="mt-10" elId="about">
+    <Section title="Short About Me" className="md:mt-10" elId="about">
       <div className="aboutme-bg w-full left-0 absolute bg-no-repeat bg-cover bg-center " style={{ top: '760px', height: '420px' }} />
       <div className="flex flex-col md:flex-row">
         <div className="mx-auto mb-5">

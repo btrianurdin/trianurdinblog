@@ -34,6 +34,9 @@
     @apply bg-aboutme-bg;
     z-index: -2;
   }
+  .anchor{
+    @apply relative inline-block;
+  }
   .anchor::after{
     content: "";
     @apply absolute bg-pinky opacity-30 bottom-0 left-2;
@@ -59,53 +62,29 @@
   .section-title:hover::after{
     width: 100%;
   }
-  .link-to{
-    @apply relative overflow-hidden no-underline text-pink-600;
-  }
-  .link-to::after{
-    content: "";
-    @apply absolute bg-pink-600 opacity-25 bottom-0 left-3;
-    width: calc(100% - 8px);
-    height: calc(100% - 8px);
-    z-index: -1;
-    transition: 0.35s cubic-bezier(0.25, 0.1, 0, 2.05);
-  }
-  .link-to:hover::after{
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 100%;
-  }
   .blog-content h1{
-    @apply text-xl md:text-2xl font-semibold;
+    @apply text-xl md:text-2xl font-medium;
   }
   .blog-content h2{
     font-size: 22px;
     line-height: 2rem;
-    @apply font-semibold;
+    @apply font-medium;
   }
   .blog-content h3{
     font-size: 20px;
     line-height: 1.75rem;
-    @apply font-semibold;
+    @apply font-medium;
   }
   .blog-content p{
     @apply my-4;
   }
   .blog-content a{
-    @apply link-to text-sm mx-0.5;
+    @apply anchor text-sm mx-0.5;
   }
   .blog-content pre{
-    @apply bg-gray-200 dark:bg-gray-600 rounded p-2 overflow-auto;
+    @apply dark:bg-gray-600 dark:text-white bg-gray-200 text-gray-600 rounded p-2 overflow-auto;
   }
   .blog-content pre code{
     @apply font-firacode font-normal text-sm;
-  }
-  .my-photo::after{
-    content: "";
-    @apply bg-pink-600 bottom-1 left-3;
-    width: 170px;
-    height: 213px;
-    z-index: -1;
   }
 }
