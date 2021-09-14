@@ -1,7 +1,6 @@
 import { FiArrowLeft } from 'react-icons/fi';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import DarkModeToggle from './DarkModeToggle';
 
 type Props = {
   title: string;
@@ -23,9 +22,6 @@ export default function PageHeader({ title, link }: Props): JSX.Element {
             <h1 className="text-xl font-semibold inline-block">{ title }</h1>
           </a>
         </Link>
-      </div>
-      <div className="w-24 flex justify-end">
-        <DarkModeToggle />
       </div>
     </div>
   );

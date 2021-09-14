@@ -17,7 +17,7 @@ export default function Home(): JSX.Element {
           pathname: '/',
         }}
       />
-      <div className="container mx-auto md:w-3/4 px-3.5">
+      <div className="container mx-auto md:w-3/4 px-3.5 text-primary">
         <Hero />
         <AboutMe />
         <Capabilities />
